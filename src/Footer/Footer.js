@@ -20,15 +20,20 @@ function FooterApp() {
     // const [finalPriceState, setFinalPriceState] = useState(0); 
 
     const handleOnChange = () => {
-        let allPrices = [ genRecTotalPrice,highAdventureTotalPrice,wildlifeCenterTotalPrice,teambuildingTotalPrice]; 
+        let allPrices = [genRecTotalPrice,wildlifeCenterTotalPrice,highAdventureTotalPrice,teambuildingTotalPrice,horseProgramsTotalPrice,poolPartiesTotalPrice]; 
+        allPrices.filter(Number);
+
+        let filteredPrices = allPrices.filter(function(x) {
+            return x !== undefined;
+        });
+
+        console.log(filteredPrices);
         if (genRecTotalPrice == null) {
             alert("Please make an activity selection first");
         }
         else if (genRecTotalPrice != null) {
-
-
-            const sum =  allPrices.reduce((result,number)=> result+number);
-            console.log(sum) // 15
+            const sum =  filteredPrices.reduce((result,number)=> result+number);
+            console.log(sum)
             setGenRecState(sum);
             // setFinalPriceState(finalPriceState + genRecState);
         }
