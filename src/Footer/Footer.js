@@ -20,9 +20,10 @@ function FooterApp() {
     // const [finalPriceState, setFinalPriceState] = useState(0); 
 
     const handleOnChange = () => {
+        //Array with all prices
         let allPrices = [genRecTotalPrice,wildlifeCenterTotalPrice,highAdventureTotalPrice,teambuildingTotalPrice,horseProgramsTotalPrice,poolPartiesTotalPrice]; 
-        allPrices.filter(Number);
-
+        
+        //Remove any undefined values from array
         let filteredPrices = allPrices.filter(function(x) {
             return x !== undefined;
         });
