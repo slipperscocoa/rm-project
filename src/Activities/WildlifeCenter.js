@@ -15,7 +15,7 @@ const wildlifeCenter = [
     { price: 221, label: "Wilderness Survival (2 hrs.)", link: "" },
 ];
 
-export var wildlifeCenterTotalPrice;
+export var wildlifeCenterTotalPrice; 
 
 const getFormattedPrice = (price) => `$${price.toFixed(2)}`;
 
@@ -68,6 +68,7 @@ function WildlifeCenterApp() {
                         <a href={link} key={index}>
                             <li>
                                 <input
+                                    className='ck'
                                     type="checkbox"
                                     id={`custom-checkbox-${index}`}
                                     name={label}

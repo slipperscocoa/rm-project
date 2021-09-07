@@ -13,6 +13,8 @@ const genRec = [
     { price: 88, label: "Slingshots", link: "https://refreshingmountain.com/activities/sling-shots-4/" },
 ];
 
+
+
 export var genRecTotalPrice = 0;
 
 const getFormattedPrice = (price) => `$${price.toFixed(2)}`;
