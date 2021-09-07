@@ -10,14 +10,8 @@ import { horseProgramsTotalPrice } from '../Activities/HorsePrograms';
 import { teambuildingTotalPrice } from '../Activities/Teambuilding';
 import { poolPartiesTotalPrice } from '../Activities/PoolParties';
 
-// function getFormattedPrice(price) {
-//     return `${price.toFixed(2)}`;
-// }
-
 function FooterApp() {
     const [genRecState, setGenRecState] = useState(0);
-    // const [wildlifeCenterState, setWildlifeCenterState] = useState(0);
-    // const [finalPriceState, setFinalPriceState] = useState(0); 
 
     const handleOnChange = () => {
         //Array with all prices
@@ -35,13 +29,9 @@ function FooterApp() {
         else if (genRecTotalPrice != null) {
             const sum =  filteredPrices.reduce((result,number)=> result+number);
             console.log(sum)
-            setGenRecState(sum);
-            // setFinalPriceState(finalPriceState + genRecState);
+            setGenRecState(sum.toFixed(2));
         }
-        // else if (wildlifeCenterTotalPrice != null) {
-        //     setWildlifeCenterState(getFormattedPrice(wildlifeCenterTotalPrice));
-        //     setFinalPriceState(finalPriceState + wildlifeCenterState); 
-        // }
+
         console.log(genRecTotalPrice);
         console.log(wildlifeCenterTotalPrice);
         console.log(highAdventureTotalPrice);
